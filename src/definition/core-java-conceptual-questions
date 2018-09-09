@@ -1,12 +1,16 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-Ans:   A programming language is a computer language engineered to create a standard form of commands. These commands
-can be interpreted into a code understood by a machine.
+Ans: A programming language is a computer language engineered to create a standard form of commands. These commands
+     can be interpreted into a code understood by a machine.
 
 What jdk contains or composed of and define each components?
+
 What is IDE?
+Ans: An Itegrated Development Environment(IDE) is a software development tool that is mainly used to write and test the programs or software.
+
 What are the IDEs available in the market to support java?
+Ans: Intellij, Eclipse, NetBeans, Codenvy, JDeveloper, BlueJ, DrJava, Geany, SlickEdit
 Explain the entire java life cycle.
 what is class?
 What is object?
