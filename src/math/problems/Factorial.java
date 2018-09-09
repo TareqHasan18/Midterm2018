@@ -20,7 +20,7 @@ public class Factorial {
         Scanner scanner = new Scanner(System.in);
         pnt = scanner.nextInt();
         scanner.close();
-        long Selnium = 1;
+        double Selnium = 1;
         int i = 1;
         while (i<= pnt){
             Selnium = Selnium * i;
