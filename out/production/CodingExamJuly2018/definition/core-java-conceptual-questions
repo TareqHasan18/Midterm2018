@@ -13,7 +13,11 @@ What are the IDEs available in the market to support java?
 Ans: Intellij, Eclipse, NetBeans, Codenvy, JDeveloper, BlueJ, DrJava, Geany, SlickEdit
 
 Explain the entire java life cycle.
+Ans:Editor(Intellij) ---> Source Code ---> Java Compiler (Javac)
+    ---->    Bytecodes(Classname.class) ----> JVM ----> Operating System
+
 what is class?
+Ans:
 What is object?
 What is the entry point of an application?
 Why main is static?
