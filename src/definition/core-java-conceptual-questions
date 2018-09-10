@@ -17,10 +17,17 @@ Ans:Editor(Intellij) ---> Source Code ---> Java Compiler (Javac)
     ---->    Bytecodes(Classname.class) ----> JVM ----> Operating System
 
 what is class?
-Ans:
+Ans:  A class is a user defined blueprint or prototype from which objects are created.
+
 What is object?
+Ans:    Object is an instance of a class and represents the real life entities.
+
 What is the entry point of an application?
+Ans:    Entry point is where an application starts to execute and Main method is that entry point.
+
 Why main is static?
+Ans:   Main is static so that it could be called without creating objects
+
 Which class is the superclass of all classes?
 What is difference between path and classpath variables?
 What is the difference between an Interface and Abstract class?
