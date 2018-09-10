@@ -1,12 +1,14 @@
 package design;
 
+/*
 import database.ConnectDB;
 
 import java.util.*;
 
 public class FortuneEmployee {
 
-	/**
+	*/
+/**
 	 * FortuneEmployee class has a main methods where you will be able to create Object from
 	 * EmployeeInfo class to use fields and attributes.Demonstrate as many methods as possible 
 	 * to use with proper business work flow.Think as a Software Architect, Product Designer and 
@@ -16,7 +18,8 @@ public class FortuneEmployee {
 	 *
 	 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 	 *
-	 **/
+	 **//*
+
 	public static void main(String[] args) throws Exception{
 
 		String mission = "Our goal is to lead you to your Dream";
@@ -100,3 +103,4 @@ public class FortuneEmployee {
 	}
 
 }
+*/

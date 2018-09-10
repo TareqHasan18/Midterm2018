@@ -37,7 +37,13 @@ Ans:  PATH is the environment variable where we specify the locations of binarie
       CLASSPATH is the path for Java application where the classes we compiled will be available.
         CLASSPATH, an environment variable is used by System or Application ClassLoader to locate and load compile Java bytecodes stored in the .class file.
 
-dffWhat is the difference between an Interface and Abstract class?
+What is the difference between an Interface and Abstract class?
+Ans:    1) Abstract class can have abstract and non-abstract methods.
+        Interface can have only abstract methods.
+        2) Abstract class doesn't support multiple inheritance.
+        Interface supports multiple inheritance.
+        3) Abstract class can have final, non-final, static and non-static variables.
+        Interface has only static and final variables.
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
 what is Access Specifier?
 What is OOP ? Define each feature of java OOP.
