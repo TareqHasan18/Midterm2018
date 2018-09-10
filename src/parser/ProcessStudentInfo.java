@@ -6,10 +6,7 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class ProcessStudentInfo {
 
@@ -40,8 +37,11 @@ public class ProcessStudentInfo {
 				String pathSelenium  = System.getProperty("user.dir") +"/src/parser/selenium.xml";
 				String pathQtp = System.getProperty("user.dir") + "/src/parser/qtp.xml";
 				String tag = "id";
-                //Create ConnectToSqlDB Object
+
+				//Create ConnectToSqlDB Object
+				ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 				ConnectToMongoDB connectToMongoDB = new ConnectToMongoDB();
+
 				//Declare a Map with List<String> into it.
 				Map<String,List<Student>> list = new LinkedHashMap<String,List<Student>>();
 				
@@ -59,19 +59,29 @@ public class ProcessStudentInfo {
 				seleniumStudents = xmlReader.parseData(tag, pathSelenium);
 
 				//Parse Data using parseData method and then store data into Qtp ArrayList.
-				
+				qtpStudents = xmlReader.parseData(tag, pathQtp);
+
 				//add Selenium ArrayList data into map.
-			
+				list.put("sel", seleniumStudents);
+
 				//add Qtp ArrayList data into map.
-		
+				list.put("qtp", qtpStudents);
 		      	
 				//Retrieve map data and display output.
-
+				Iterator pnt = list.keySet().iterator();
+				while (pnt.hasNext()){
+					List lst = list.get(pnt.next());
+					for (Object str : lst){
+						System.out.println(str);
+					}
+				}
 
 
 				//Store Qtp data into Qtp table in Database
 				connectToMongoDB.insertIntoMongoDB(seleniumStudents,"qtp");
 				//connectToSqlDB.insertDataFromArrayListToMySql(seleniumStudents, "qtp","studentList");
+				ConnectToSqlDB connectToSqlDB1 = new ConnectToSqlDB();
+
 
 				//Store Selenium data into Selenium table in Database
 

@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends AbstractEmployee{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -21,6 +21,11 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
+	private int employeeId;
+	private String employeeName;
+	private String departmentName;
+	static double salary;
+	private int performance;
 	
 	/*
 	 * You must implement the logic for below 2 methods and 
@@ -33,12 +38,85 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
+		this.employeeId = employeeId;
 		
 	}
     public EmployeeInfo(String name, int employeeId){
+		this.employeeName = employeeName;
+		this.employeeId = employeeId;
 		
 	}
-	
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public int employeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeName(String employeeName) {
+		this.employeeName = employeeName;
+	}
+
+
+	public String employeeName() {
+		return employeeName;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public int getPerformance() {
+		return performance;
+	}
+
+	public void setPerformance(int performance) {
+		this.performance = performance;
+	}
+
+
+	public void assignDepartment(String departmentName) {
+		this.departmentName = departmentName;
+	}
+
+	public String getDepartmentName() {
+		return departmentName;
+	}
+
+	@Override
+	public void describeCompany() {
+		companyName = "We are PNT Selenium 2018";
+		System.out.println("About Three years ago from today " + founderName + " founded the " + companyName + " located at " + address + ".");
+	}
+
+	public void describeCompany(String mission) {
+		System.out.println(mission);
+	}
+
+	public void describeCompany(String mission, String vision) {
+		System.out.println(mission);
+		System.out.println(vision);
+	}
+
+	//calculate employee salary
+	public double calculateSalary(double salary) {
+		double yearlySalary = salary * 12;
+		return yearlySalary;
+	}
+
+	//employee benefit
+	public void benefitLayout() {
+		System.out.println("You have one paid trip bonus.");
+
+	}
+
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -47,8 +125,19 @@ public class EmployeeInfo {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
+	public static int calculateEmployeeBonus(int numberOfYearsWithCompany, double salary, int performance){
 		int total=0;
+		int  high = 4, medium = 3, low = 2, bad = 1;
+		if (performance == high){
+			total = (int)(salary  * 0.1 * 12);
+		}else if (performance == medium){
+			total = (int)(salary * 0.08 * 12);
+		}else if (performance == low){
+			total = (int)(salary * 0.05 * 12);
+		}else {
+			total = 0;
+			System.out.println("You need to improve ASAP");
+		}
 		return total;
 	}
 	
@@ -70,7 +159,29 @@ public class EmployeeInfo {
 
         //implement numbers of year from above two dates
 		//Calculate pension
+		String startYear = convertedJoiningDate.substring(convertedJoiningDate.length()-4, convertedJoiningDate.length());
+		String currentYear = convertedTodaysDate.substring(convertedTodaysDate.length() - 4, convertedTodaysDate.length());
 
+
+		int start = Integer.parseInt(startYear);
+		int current = Integer.parseInt(currentYear);
+
+		int numberOfYears = current - start;
+
+		if (numberOfYears >= 5) {
+			total = (int)(salary * .25);
+		} else if (numberOfYears == 4) {
+			total = (int)(salary * .20);
+		} else if (numberOfYears == 3) {
+			total = (int)(salary * .15);
+		} else if (numberOfYears == 2) {
+			total = (int)(salary * .10);
+		} else if (numberOfYears == 1) {
+			total = (int)(salary * .05);
+		} else if (numberOfYears == 0) {
+			total = 0;
+		}
+		System.out.println("Total pension: $" + total);
 		return total;
 	}
 	private static class DateConversion {
