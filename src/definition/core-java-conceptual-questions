@@ -45,11 +45,28 @@ Ans:    1) Abstract class can have abstract and non-abstract methods.
         3) Abstract class can have final, non-final, static and non-static variables.
         Interface has only static and final variables.
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+Ans:    NO; By providing anonymous inner class to Abstract class or interface we can say they have intantiated indirectly.
+
 what is Access Specifier?
+Ans:    Access specifier is used to control the visibility of members like classes, variables and methods.
+
 What is OOP ? Define each feature of java OOP.
+Ans:    Object-oriented programming (OOP) is a programming language model organized around objects rather than "actions" and data rather than logic.
+        Encapsulation: it means hiding data and methods within an Object. it provides the security that keeps data and methods safe from inadvertent changes.
+        Inheritance: it is mainly code reusability.That means ability to create classes that share the attributes and methods of existing classes, but with more specific features.
+        Polymorphism: it is the ability of an object to take on many form.
+        Abstraction: in one word Abstraction is Implementation hiding
+
 What is Java Package and which package is imported by default?
+Ans:    Java Package: A Java package is a mechanism for organizing Java classes and interfaces into namespaces similar to the modules of Modula.
+        java.lang package is imported by default.
+
 What is API? Name list of API that you have used so far.
+Ans:    API:API is a specification of possible interactions with a software component. That means it is a software intermediary that allows two applications to talk to each other.
+        java.lang, java.util, java.io, buffereader, filereader,
+
 Does java support multiple inheritance, explain why or why not?
+
 What is method overloading and when it happens?
 Explain exceptions in java and how to handle it.
 What is static keyword in java? How it has been used in variables and methods ?
