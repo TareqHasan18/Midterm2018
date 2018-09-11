@@ -68,6 +68,8 @@ Ans:    API:API is a specification of possible interactions with a software comp
 Does java support multiple inheritance, explain why or why not?
 
 What is method overloading and when it happens?
+Ans:    Method Overloading is a feature that allows a class to have more than one method having the same name, if their argument lists are different.
+        Method Overloading occurs in Compile Time.
 Explain exceptions in java and how to handle it.
 What is static keyword in java? How it has been used in variables and methods ?
 What is final and how it has been used variables and methods?
