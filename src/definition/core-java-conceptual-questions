@@ -66,13 +66,30 @@ Ans:    API:API is a specification of possible interactions with a software comp
         java.lang, java.util, java.io, buffereader, filereader,
 
 Does java support multiple inheritance, explain why or why not?
-
+Ans:    Java doesn’t allow multiple inheritance. Java doesn’t allow multiple inheritance to avoid the ambiguity caused by it.
 What is method overloading and when it happens?
 Ans:    Method Overloading is a feature that allows a class to have more than one method having the same name, if their argument lists are different.
         Method Overloading occurs in Compile Time.
+
 Explain exceptions in java and how to handle it.
+Ans:    An exception (or exceptional event) is a problem that arises during the execution of a program. When an
+        Exception occurs the normal flow of the program is disrupted and the program/Application terminates abnormally, which is not recommended
+        Java provides specific key words for exception handling and those are: throw, throws, try-catch, finally.
+
 What is static keyword in java? How it has been used in variables and methods ?
+Ans:    static is a non-access modifier in Java which is applicable for the following:blocks, variables, methods,nested classes.
+        Static for Variable: It is a variable which belongs to the class and not to object(instance)
+                             Static variables are initialized only once, at the start of the execution. These variables will be initialized first, before the initialization of any instance variables
+                             A single copy to be shared by all instances of the class
+                             A static variable can be accessed directly by the class name and doesn’t need any object
+        Static for Method: It is a method which belongs to the class and not to the object(instance)
+                           A static method can access only static data. It can not access non-static data (instance variables)
+                           A static method can call only other static methods and can not call a non-static method from it.
+                           A static method can be accessed directly by the class name and doesn’t need any object
+                           A static method cannot refer to "this" or "super" keywords in anyway
+
 What is final and how it has been used variables and methods?
+Ans:
 What is final, finally and finalize?
 What is a constructor ?
 Can we have multiple constructors in a class?
@@ -80,9 +97,17 @@ If we don't have a constructor declared, what is called during the object creati
 What is "this" keyword in java ?
 What is "super" keyword in java? How many possible way can you use?
 What is JVM stand for ?
+Ans:    JVM stands for Java virtual machine (JVM) is a virtual machine that enables a computer to run Java programs
+        as well as programs written in other languages and compiled to Java bytecode.
 Is JVM platform independent?
+
 What version of java are you using?
+Ans:    i am using java version 8 or 1.8.
+
 What is JAR stand for ?
+Ans:    JAR stands for "Java ARchive". A JAR file is basically a zip-file which contains a couple of class files and
+        a text file containing some meta information.
+
 What is the difference between JDK and JVM?
 What is the difference between JVM and JRE?
 What is compile time and run time?
