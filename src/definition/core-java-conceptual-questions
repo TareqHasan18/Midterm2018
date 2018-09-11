@@ -67,6 +67,7 @@ Ans:    API:API is a specification of possible interactions with a software comp
 
 Does java support multiple inheritance, explain why or why not?
 Ans:    Java doesn’t allow multiple inheritance. Java doesn’t allow multiple inheritance to avoid the ambiguity caused by it.
+
 What is method overloading and when it happens?
 Ans:    Method Overloading is a feature that allows a class to have more than one method having the same name, if their argument lists are different.
         Method Overloading occurs in Compile Time.
@@ -90,16 +91,37 @@ Ans:    static is a non-access modifier in Java which is applicable for the foll
 
 What is final and how it has been used variables and methods?
 Ans:
+
 What is final, finally and finalize?
+Ans:    final: Final is used to apply restrictions on class, method and variable. Final class can't be inherited, final
+        method can't be overridden and final variable value can't be changed.
+        finally: Finally is used to place important code, it will be executed whether exception is handled or not.
+        finalize: Finalize is used to perform clean up processing just before object is garbage collected.
+
 What is a constructor ?
+Ans:    A constructor in Java is a block of code which is called when an instance of an object is created.
+
 Can we have multiple constructors in a class?
+Ans:   YES.
+
 If we don't have a constructor declared, what is called during the object creation?
+Ans:    Default constructor.
+
 What is "this" keyword in java ?
+Ans:    "this" is a keyword is a reference variable and it refers to the current object.
+
 What is "super" keyword in java? How many possible way can you use?
+Ans:    The super keyword in java is a reference variable that is used to refer parent class objects.
+         1) super.<variable_name> refers to the variable of variable of parent class.
+         2) super() invokes the constructor of immediate parent class.
+         3) super.<method_name> refers to the method of parent class.
+
 What is JVM stand for ?
 Ans:    JVM stands for Java virtual machine (JVM) is a virtual machine that enables a computer to run Java programs
         as well as programs written in other languages and compiled to Java bytecode.
+
 Is JVM platform independent?
+Ans:    YES;
 
 What version of java are you using?
 Ans:    i am using java version 8 or 1.8.
@@ -109,15 +131,46 @@ Ans:    JAR stands for "Java ARchive". A JAR file is basically a zip-file which 
         a text file containing some meta information.
 
 What is the difference between JDK and JVM?
+Ans:    JDK - stands for Java development kit and provides tools to develop Java program e.g. Java compiler. It also contains JRE.
+        JVM - stands for Java virtual machine and it's the process responsible for running Java application.
+
 What is the difference between JVM and JRE?
+Ans:    JDK - stands for Java development kit and provides tools to develop Java program e.g. Java compiler. It also contains JRE.
+        JRE- stands for Java Runtime Environment (standard libraries and JVM) required to run Java applications
+
 What is compile time and run time?
+Ans:    Compile time is when the code gets compiled to executable code (byte-code). That means, all files are linked
+        (which user include by import expression), and byte-code, i.e. sequence of instructions is created.
+
+        Run time is when the CPU runs the compiled code - byte code.
+
 What is heap?
+Ans:    Heap is a section of memory which contains Objects and may also contain reference variables. Instance variables are created in the heap
+
 How java manage it's memory?
+Ans:    Java has automatic memory management, a nice and quiet garbage collector that works in the background to clean up the unused objects and free up some memory.
+
 What is the difference between String, StringBuffer and StringBuilder?
+Ans:    String is immutable whereas StringBuffer and StringBuider are mutable classes.
+        StringBuffer is thread safe and synchronized whereas StringBuilder is not, thats why StringBuilder is more faster than StringBuffer.
+        String concat + operator internally uses StringBuffer or StringBuilder class.
+        For String manipulations in non-multi threaded environment, we should use StringBuilder else use StringBuffer class.
+
 What is Singleton class?
+Ans:    A singleton class is a class that can have only one object (an instance of the class) at a time.
+        To design a singleton class we need to:
+        Make constructor as private.
+        Write a static method that has return type object of this singleton class. Here, the concept of Lazy initialization in used to write this static method.
+
 What is Serialization and Deserialization?
+Ans:    Serialization is a process of converting an object into a sequence of bytes which can be persisted to a disk or database or can be sent through streams.
+        Deserialization is The reverse process of creating object from sequence of bytes.
+
 when to use transient variable in java?
+Ans:    User uses transient variable when doesn't want the object to be serialized in serialization.
+
 Difference between while and do..while loop?
+
 What is Enum?
 What is Iterator?
 Which one will take more memory, an int or Integer?
