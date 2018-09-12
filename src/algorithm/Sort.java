@@ -1,5 +1,7 @@
 package algorithm;
 
+import org.testng.annotations.Test;
+
 public class Sort {
 
     long executionTime = 0;
