@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 public class Sort {
 
     long executionTime = 0;
+    long executionTime1 = 0;
 	/*
 	 * Please implement all the sorting algorithm. Feel free to add helper methods.
 	 * Store all the sorted data into one of the databases.
@@ -51,7 +52,7 @@ public class Sort {
 
         final long endTime = System.currentTimeMillis();
         final long executionTime = endTime - startTime;
-        this.executionTime = executionTime;
+        this.executionTime1 = executionTime;
         return list;
     }
 
