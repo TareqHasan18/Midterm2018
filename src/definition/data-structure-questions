@@ -88,29 +88,152 @@ Ans:    FIFO - First In First Out. example : Queue
         LIFO - Last In First Out. example : Stack
 
 what is the order of complexity?
-Ans:
+Ans:    The order of complexity is a certain mathematical expression of the size of the input, and the algorithm finishes between two factors of it.
+        as an example for the input is of size N, we can say that the algorithm will finish at O(N), O(N^2), O(N^3), O(N*log(N)) etc.
 
 what is the best case to search an element from an array?
-Ans:
+Ans:    the best case to search an element from an array or the best-case performance is used to describe an algorithm's behavior under optimal conditions.
+        For example, the best case for a simple linear search on a list occurs when the desired element is the first element of the list.
+
 what is the worst case to search an element from an array?
+Ans:    The worst case to search happens when the element to be searched is at last position or not present in the array.
+        Therefore we have to traverse the whole array giving n no. of repetitions over loop.
+        Therefore the worst case time complexity is O(n).
+
 what is tree in data structure?
+Ans:    A tree is a data structure made up of nodes or vertices and edges without having any cycle. The tree with no nodes is called the null or empty tree.
+        Tree is well known as a non-linear Data Structure. It doesn’t store data in a linear way. It organizes data in a hierarchical way.
+
 what is graph in data structure?
+Ans:    A graph is a pictorial representation of a set of objects where some pairs of objects are connected by links.
+        The interconnected objects are represented by points termed as vertices, and the links that connect the vertices are called edges.
+
 what is the difference between the HashTable and HashMap?
+Ans:    HashMap is not thread-safe  while Hashtable is a thread-safe collection.
+        Since HashMap is not synchronized it perform better than Hashtable.
+        Hashtable is obsolete class and we should be using ConcurrentHashMap in place of Hashtable in Java.
+
 What are the major data structures used in the following areas : RDBMS, Network data model and Hierarchical data model.
+Ans:    The major data structures used are as follows:
+        RDBMS – Array (i.e. Array of structures)
+        Network data model – Graph
+        Hierarchical data model – Trees
+
 How HashMap works in java?
+Ans:    HashMap in Java works on hashing principle. It is a data structure which allows us to store object and
+        retrieve it in constant time O(1) provided we know the key. In hashing, hash functions are used to link key and
+        value in HashMap. Objects are stored by calling put(key, value) method of HashMap and retrieved by calling get(key) method.
+
 What is ArrayIndexOutOfBoundsException in java? When it occurs?
+Ans:    The ArrayIndexOutOfBoundsException is a Runtime Exception thrown only at runtime.
+        It occurs when we try to access an element of an array, with an index that is negative ot more than the size of array itself.
+
 What are the different ways of copying an array into another array?
+Ans:    There are mainly four different ways to copy all elements of one array into another array in Java.
+        1. Manually
+        2. Arrays.copyOf()
+        3. System.arraycopy()
+        4. Object.clone()
+
 What is difference between an array and a linked list?
+Ans:    Array is a collection of elements of similar data type.
+        Linked List is an ordered collection of elements of same type, which are connected to each other using pointers.
+
+        Array supports Random Access, which means elements can be accessed directly using their index, like arr[0] for 1st element, arr[6] for 7th element etc.
+        Linked List supports Sequential Access, which means to access any element/node in a linked list, we have to sequentially traverse the complete linked list, upto that element.
+
+        Accessing elements in an array is fast with a constant time complexity of O(1).
+        To access nth element of a linked list, time complexity is O(n).
+
+        In an array, elements are stored in contiguous memory location or consecutive manner in the memory.
+        In a linked list, new elements can be stored anywhere in the memory.
+
 What is DFS and BFS?
+Ans:    DFS(Depth First Search) or DFS algorithm is to traverse the graph in such a way that it tries to go far from the root node.
+        Stack is used in the implementation of the depth first search.
+
+        This is a very different approach for traversing the graph nodes. The aim of BFS algorithm is to traverse the graph as close as possible to the root node.
+        Queue is used in the implementation of the breadth first search.
+
 What is Recursion?
+Ans:    The process in which a function calls itself directly or indirectly is called recursion and the corresponding function is called as recursive function.
+
 What are linear and non linear data Structures?
+Ans:    Linear Data Structures: The data structure where data items are organized sequentially or linearly where data
+        elements attached one after another is called linear data structure.
+        Examples of linear data structures are Arrays, Stack, Queue and Linked List.
+        Non Linear Data Structures: The data structure where data items are not organized sequentially is called non
+        linear data structure. Examples of non linear data structures are Trees and Graphs.
+
 What is Big-(O)-notation?
+Ans:    Big O notation is used in Computer Science to describe the performance or complexity of an algorithm. Big O
+        specifically describes the worst-case scenario, and can be used to describe the execution time required (how long
+        an algorithm will take to run) or the space used (e.g. in memory or on disk) by an algorithm.
+
 Outlined different kind of sorting algorithm with time complexity?
+Ans:       1.Selection sort: It is an in-place comparison sort.Selection sort is noted for its simplicity,
+           and also has performance advantages over more complicated algorithms in certain situations.
+           Worst case performance: O(n2)
+           Best case performance: O(n2)
+           Average case performance: O(n2)
+           Worst case space complexity: O(n) total, O(1) auxiliary
+
+           2.Insertion sort: It is a comparison sort in which the sorted array (or list) is built one entry
+           at a time. It is much less efficient on large lists than more advanced algorithms such as quicksort,
+           heapsort, or merge sort.
+           Worst case performance: O(n2)
+           Best case performance: O(n)
+           Average case performance: O(n2)
+           Worst case space complexity: O(n) total, O(1) auxiliary
+
+           3.Bubble sort: It is a comparison algorithm. It works by repeatedly stepping
+           through the list to be sorted, comparing each pair of adjacent items and swapping them
+           if they are in the wrong order. The pass through the list is repeated until no swaps are
+           needed, which indicates that the list is sorted.
+           Worst case performance: O(n2)
+           Best case performance: O(n)
+           Average case performance: O(n2)
+           Worst case space complexity: O(n) total, O(1) auxiliary
+           Bubble sort is not a practical sorting algorithm when n is large.
+
+           4.Merge sort: It is an O(n log n) comparison-based sorting algorithm.
+           Worst case performance: O(n log n)
+           Best case performance: O(n log n) typical
+           Average case performance: O(n log n)
+           Worst case space complexity: O(n) total, O(n) auxiliary
+
+           5.Quick sort: It is similar to merge sort in many ways. It divides the elements to be sorted into
+           two groups, sorts the two groups by recursive calls, and combines the two sorted groups into
+           a single array of sorted values.
+           The choice of a good pivot element is critical to the efficiency of the quicksort algorithm.
+           If we can ensure that the pivot element is near the median of the array values, then quicksort is very efficient.
+           on average, makes O(n log n) comparisons to sort n items, in the worst case, it makes O(n2) comparisons
 
 Draw a table with time complexity in which it will summarize all the data structure feature's advantages and disadvantages.
   a)In terms of Accessing element.
   b)In terms of Inserting element.
   c)In terms of Searching element.
   d)In terms of Removing element.
+
+
+                                            Common Data Structure Operations
+
+  Data Structure	                                Time Complexity
+                      Average	                                        Worst
+                      Access	    Search	    Insertion	Deletion	Access	    Search	    Insertion	Deletion
+  Array	               Θ(1)	       Θ(n)	          Θ(n)	    Θ(n)	    O(1)	    O(n)	    O(n)	    O(n)
+  Stack	               Θ(n)	       Θ(n)	          Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+  Queue	               Θ(n)	       Θ(n)	          Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+  Singly-Linked List   Θ(n)	       Θ(n)	          Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+  Doubly-Linked List   Θ(n)	       Θ(n)	          Θ(1)	    Θ(1)	    O(n)	    O(n)	    O(1)	    O(1)
+  Skip List	          Θ(log(n))	  Θ(log(n))	    Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
+  Hash Table	       N/A	       Θ(1)	          Θ(1)	    Θ(1)	    N/A	        O(n)	    O(n)	    O(n)
+  Binary Search Tree  Θ(log(n))    Θ(log(n))	Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
+  Cartesian Tree	   N/A	       Θ(log(n))	Θ(log(n))	Θ(log(n))	N/A	        O(n)	    O(n)	    O(n)
+  B-Tree	          Θ(log(n))   Θ(log(n))	    Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+  Red-Black Tree	  Θ(log(n))   Θ(log(n))	    Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+  Splay Tree	       N/A	       Θ(log(n))	Θ(log(n))	Θ(log(n))	N/A	        O(log(n))	O(log(n))	O(log(n))
+  AVL Tree	          Θ(log(n))	  Θ(log(n))	    Θ(log(n))	Θ(log(n))	O(log(n))	O(log(n))	O(log(n))	O(log(n))
+  KD Tree 	          Θ(log(n))	  Θ(log(n))	    Θ(log(n))	Θ(log(n))	O(n)	    O(n)	    O(n)	    O(n)
 
 
